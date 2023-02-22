@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+ 
+}
+#game-container{
+    width: 700px;
+    height: 450px;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    border: solid 2px black;
+}
+#ball{
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 300ms linear;
+}
+#wrap{
+    width: 100%;
+    height:100vh;
+    min-height: 500px;
+}

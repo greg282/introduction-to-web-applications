@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="change-view" onclick="changeView()">Change view to subregion</div>
+    <div id="form">
+        <div id="subregion-form">
+            Subregion
+            <div id="subregion-list">
+                <select id="selectRegion" onchange="capitalSearch()">
+                    <option id="first_opo">Choose a subregion</option>
+                </select>
+
+            </div>
+        </div>
+        <div id="capital-form">
+            Capital
+            <div id="captial-search">
+                <input type="text" id="myInput" onkeyup="capitalSearch()" placeholder="Search for capital.." title="Type in a name">
+
+            </div>
+        </div>
+        <div class="slidecontainer">
+            Population
+            <input type="range" min="0" max="1402112000"  value="1402112000" class="slider" id="myRange" oninput="capitalSearch()">
+            <p>Value: <span id="demo"></span></p>
+          </div>
+        <div class="slidecontainer">
+            Area
+            <input type="range" min="-1" max="17098242" value="17098242" class="slider" id="myRange2" oninput="capitalSearch()">
+            <p>Value: <span id="demo2"></span></p>
+          </div>
+    </div>
+    <table>
+        <table class="blueTable">
+            <thead>
+            <tr>
+            <th style="width:40% ;">Name <button id="name-sort" class="sorting">sort</button></th>
+            <th style="width:20% ;" id="second-column">Capital<button id="capital-sort" class="sorting">sort</button></th>
+            <th style="width:20% ;" id="third-column">Population<button id="population-sort" class="sorting">sort</button></th>
+            <th style="width:20% ;" id="four-column">Area<button id="area-sort" class="sorting">sort</button></th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+            <td colspan="4">
+            <div id="pages_l" class="pagination"></div>
+            </div>
+            </td>
+            </tr>
+            </tfoot>
+            <tbody id="my_table">
+            </tbody>
+            </table>
+           
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

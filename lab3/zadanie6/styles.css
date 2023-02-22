@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    background-color: whi;
+    
+}
+#phonebook{
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   min-width: 834px;
+}
+#example-record{
+    border: solid 2px black;
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: nowrap;
+   background-color: white;
+   width: 70%;
+   height: 100%;
+
+   margin: 20px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    scale: 0.7;
+}
+#record-right{
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    margin: 20px;
+    cursor: pointer;
+    transition: color 300ms ease-in-out;
+    background: url("recycle-bin.png");
+    background-size:70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(0, 130, 0);
+
+}
+#record-left{
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#record-name{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+#record-tel{
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+form{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-self: center;
+}
+#form{
+    border: solid 2px black;
+    width: 70%;
+    background-color: white; 
+    margin: 20px;
+    min-width: 800px;
+}
+input{
+    height: 40px;
+    font-size: 1.2rem;
+    border: solid black 2px;
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 300px;
+}
+.wrap{
+    margin: 20px;
+    display:flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+#button{
+    background-color: green;
+    font-size: 1.4rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: color 300ms ease-in-out;
+}
+#button:hover{
+    background-color: rgb(3, 79, 3);
+    transition: color 300ms ease-in-out;
+}
+#record-right:hover{
+    background-color: rgb(3, 79, 3);
+    transition: color 300ms ease-in-out;
+}
+.uppertext1{
+    position: absolute;
+    font-size: 1rem;
+    top: -1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.uppertext2{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    left: 320px;
+    top: -1.1rem;
+}

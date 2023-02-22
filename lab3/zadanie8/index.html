@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main-container">
+        <div id="password-container">
+            <div class="wrap1">
+                <div class="wrap2">
+                    <div class="header">New password</div>
+                    <div class="newpass-wrap">
+                        <input type="text" name="newpassword" id="newpassword" maxlength="16">
+                        <i class="fa fa-eye" aria-hidden="true" id="hidenew"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap1">
+                <div class="wrap2">
+                    <div class="header">Repeat new password</div>
+                    <div class="newpass-wrap">
+                        <input type="password" name="newpassword" id="reppassword" maxlength="16">
+                        <i class="fa fa-eye-slash" aria-hidden="true" id="hiderep"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="requirments">
+                Password requirments
+                <div class="req-wrap">
+                    <div class="one-req">
+                        <img src="close.png" alt="" class="firstreq" id="eight">
+                        <div class="text"> at least 8 characters</div>
+                    </div>
+                    <div class="one-req">
+                        <img src="close.png" alt="" class="firstreq" id="special">
+                        <div class="text"> at least one special character</div>
+                    </div>
+                    <div class="one-req">
+                        <img src="close.png" alt="" class="firstreq" id="capital">
+                        <div class="text"> at least one capital letter</div>
+                    </div>
+                    <div class="one-req">
+                        <img src="close.png" alt="" class="firstreq" id="digit">
+                        <div class="text"> at least one digit</div>
+                    </div>
+                </div>
+            </div>
+            <div id="button">
+                Check password identity
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+.zombie{
+    width: 200px;
+    height: 312px;
+    background-position-x: 0px;
+    background-repeat: no-repeat;
+    background-image: url("images/walkingdead.png");
+    position: absolute;
+
+  
+}
+#board{
+    position: relative;
+    height: 100vh;
+    min-height: 800px;
+    overflow: hidden;
+    background-image: url("images/board-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+   
+   
+}
+#points{
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 2;
+    user-select: none;
+    right:20px;
+    top:20px;
+}
+#lives{
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 2;
+    user-select: none;
+    left:20px;
+    top:20px;
+}
+#cursor{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    outline:5px solid white;
+    
+    position: absolute;
+    padding: 10px;
+    z-index:2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+  }
+  #inside-cursor{
+    background: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    pointer-events: none;
+
+  }
+  #user-nickname{
+    position: absolute;
+    padding: 50px;
+    width: 60%;
+    background-color: #A7476C;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 3;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:20%;
+}
+#txt{
+    height: 2.5rem;
+    font-size: 2rem;
+    margin-top: 20px;
+    
+}
+.rndtxt{
+    font-size: 2rem;
+    color: #F9D155;
+    text-align: center;
+    
+}
+
+#button{
+    background-color: #4C2252;
+    color:  #F9D155;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#username{
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    z-index: 4;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+#records{
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    padding: 50px;
+    width: 60%;
+    background-color: #A7476C;
+    border-radius: 10px;
+}
+.headtxt{
+    font-size: 2rem;
+    color: #F9D155;
+    text-align: center;
+    margin-bottom: 20px;
+}
+table,tr,td{
+    text-align: left;
+}
+table{
+    border: solid 2px black;
+    border-collapse: collapse;
+width: 100%;
+}
+td{
+    background-color: white;
+    border: solid 2px black;
+}
+.heading>td{
+    background-color: #F9D155;
+}
+#playagain{
+    background-color: #4C2252;
+    color: #F9D155;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    cursor: pointer;
+}
