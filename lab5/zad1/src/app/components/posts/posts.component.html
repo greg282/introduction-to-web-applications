@@ -1,0 +1,19 @@
+<form [formGroup]="newPostForm">
+    <div>
+        <label for="title">Title: </label>
+        <input type="text" formControlName="title">
+    </div>
+
+    <div>
+        <label for="text">Text: </label>
+        <input type="text" formControlName="text">
+    </div>
+
+    <button class="sendbtn" (click)="sendData()">Send</button>
+</form>
+<div *ngFor="let post of data" class="comment">
+    <div>UserID: {{post.userId}}</div>
+    <div>ID: {{post.id}}</div>
+    <div>Title: {{post.title}}</div>
+    <div>Body: {{post.body}}</div>
+</div>

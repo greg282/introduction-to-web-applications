@@ -1,0 +1,17 @@
+<div *ngIf="student" id="student">
+  <div>
+    <label>Imie: </label> {{student.name}}
+  </div>
+  <div>
+    <label [ngStyle]="{'display': enabled? '' :'none'}" >Wiek:  {{student.age}}</label>
+    <form (ngSubmit)="onSubmit()" [ngStyle]="{'display': !enabled? '' :'none'}" > <label for="age">Wiek:</label>
+      <input type="text" class="form-control" id="age" required [(ngModel)]="student.age" name="age">
+      <button type="submit" class="btn btn-success">Wyslij</button>
+    </form>
+  </div>
+
+  <span  [ngStyle]="{'display': enabled? '' :'none'}" class="button is-small btn-danger" (click)='deleteStudent()'>Delete</span>
+  <span class="button is-small btn-danger" (click)='onClickEdit($event)'>Edit</span>
+
+  <hr />
+</div>

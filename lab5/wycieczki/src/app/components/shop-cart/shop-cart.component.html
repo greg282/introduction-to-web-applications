@@ -1,0 +1,8 @@
+<div  *ngFor="let items of positions_in_cart" class="main-position-container">
+  <div>{{items.name}}</div>
+  <div>{{items.country}}</div>
+  <div>Cena: {{items.price | currency}}</div>
+  <div>Ilosc: {{items.counter}}</div>
+</div>
+<div id="total">Suma: {{curr_price| currency}}</div>
+

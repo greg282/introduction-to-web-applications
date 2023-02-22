@@ -1,0 +1,23 @@
+<div class="navbar">
+
+  <div class="underbar">
+
+     <div id="routes">
+      <a routerLink="/home" routerLinkActive="active" >Strona Główna</a>
+      <a routerLink="/tourlist" routerLinkActive="active" >Lista wycieczek</a>
+       <a routerLink="/form" routerLinkActive="active" >Dodaj wycieczkę </a>
+       <a routerLink="/cart" routerLinkActive="active" >Koszyk</a>
+
+     </div>
+     <div  style="user-select: none;"  class="cart" (click)="showCart()"
+     [ngStyle]="{'background': tour_counter>10 ? 'green' : 'red'}"
+     >W koszyku: {{tour_counter}}<fa-icon [icon]="faCartShopping"></fa-icon>
+
+
+     <app-shop-cart [ngStyle]="{'display': showCart_bool ? '' : 'none'}"></app-shop-cart>
+   </div>
+
+  </div>
+
+
+  </div>

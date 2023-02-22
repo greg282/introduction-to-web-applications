@@ -1,0 +1,7 @@
+<ng-container *ngFor="let photo of data">
+    <div class="photo-box" *ngIf="photo.id<=10">
+        <div>{{photo.title}}</div>
+        <a href="/photos/{{photo.id}}"><img src={{photo.thumbnailUrl}} alt=""></a>
+    </div>
+</ng-container>
+

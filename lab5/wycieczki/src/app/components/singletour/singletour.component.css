@@ -1,0 +1,148 @@
+.desc{
+  width: 100%;
+}
+fieldset{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+button{
+  border: solid 2px black;
+  padding: 10px;
+  border-radius: 10px;
+}
+button:hover{
+  background-color: rgb(178, 178, 178);
+  transition: all 400ms;
+}
+.reviews{
+  width: 100%;
+  box-sizing: border-box;
+}
+.imgwrap{
+  max-width: 400px;
+}
+img{
+  width: 100%;
+}
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+app-star-review{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.uptext{
+  width: fit-content;
+  background-color: rgb(130, 49, 39);
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: solid 2px black;
+}
+.wrap{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+img{
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border-radius: 15px;
+}
+.descc{
+  margin: 20px;
+  font-size: 1.5rem;
+  width: 60%;
+  background-color: rgb(130, 49, 39);
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 2px black;
+}
+.price{
+  margin: 20px;
+  font-size: 1.5rem;
+  background-color: rgb(130, 49, 39);
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 2px black;
+}
+
+.review{
+  margin: 20px;
+  font-size: 1rem;
+  background-color: rgb(130, 49, 39);
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 2px black;
+}
+fieldset{
+  width: 100%;
+}
+
+#minus{
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border: solid 2px black;
+  cursor: pointer;
+
+ }
+ #plus{
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border: solid 2px black;
+  cursor: pointer;
+ }
+ #curr-count{
+  font-size: 1.5rem;
+  padding: 5px;
+  background-color: grey;
+  border-radius: 10px;
+  margin: 10px;
+ }
+app-tour{
+  position: relative;
+top: 0;
+left: 20%;}
+.deldb{
+  position: absolute;
+  top: 0;
+  left:0;
+  font-size: 1.5rem;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 2px black;
+  white-space:nowrap;
+  margin: 10px;
+  cursor: pointer;
+}

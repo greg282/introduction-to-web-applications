@@ -1,0 +1,23 @@
+<router-outlet></router-outlet>
+<div class="main" [ngStyle]="{'display':hide_main ? 'none' : '' }">
+  <app-tour
+#iems
+(enableCurrItem)="setEnabledByID($event)"
+(disableCurrItem)="setDisabledByID($event)"
+(updateLocalDatabase)="rmById($event)"
+(notifyParent)="updateCart($event)"
+  *ngFor="let item of database"
+  [name]="item.name"
+  [country_of_dest]="item.country_of_dest"
+  [start_date]="item.start_date"
+  [end_date]="item.end_date"
+  [unit_price]="item.unit_price"
+  [max_people]="item.max_people"
+  [curr_state]="item.curr_counter"
+  [description]="item.description"
+  [photo_src]="item.photo_src"
+  [id]="item.id"
+  [ngClass]="{'cheapest': item.unit_price==getmaxprice(),'highestprice' : item.unit_price==getminprice()}"
+
+  #listel></app-tour>
+</div>
