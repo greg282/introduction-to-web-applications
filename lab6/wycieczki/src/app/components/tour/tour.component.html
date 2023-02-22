@@ -1,0 +1,37 @@
+
+<div id="main-container" [ngStyle]="{'height': special?'565px':'0px'}" >
+  <div id="tour-name" *ngIf="special">{{name | uppercase }}</div>
+  <div id="delete" (click)="removeTour($event)" *ngIf="special">&#10060;</div>
+  <div id="photo-container" *ngIf="special">
+    <img src="{{photo_src}}" alt="" (click)="openDetails()">
+  </div>
+  <div id="country" *ngIf="special">{{country_of_dest | uppercase}}</div>
+  <div id="dates" *ngIf="special">
+    <div class="start" >Start: {{start_date.toDate() | date}}</div>
+    <div class="end">Koniec: {{end_date.toDate() | date}}</div>
+  </div>
+  <div id="description"*ngIf="special">{{description}}</div>
+  <div id="special1" *ngIf="special"
+  [ngStyle]="{'display': curr_state==0 ? 'block' : 'none' }"
+  >Brak miejsc</div>
+  <div id="special2" *ngIf="special"
+  [ngStyle]="{'display': curr_state<=3&&curr_state>0 ? 'block' : 'none' }"
+  >Ostatnie miejsca</div>
+<div class="wrapr" style="margin-bottom:20px ;">
+    <div id="down-menu">
+      <div id="price" *ngIf="special">Cena: {{unit_price | currency:'EUR'}}</div>
+      <div id="add-delete-count">
+        <div style="user-select: none;" #rmbutton id="minus" (click)="rm_click()">&#8722;
+        </div>
+        <div id="curr-count">{{curr_state}}</div>
+        <div style="user-select: none;" #plusbutton id="plus" (click)="add_click()">&#43;
+        </div>
+      </div>
+
+    </div>
+
+  <div id="review-site" *ngIf="special">
+  </div>
+</div>
+
+</div>

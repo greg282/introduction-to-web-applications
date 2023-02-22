@@ -1,0 +1,77 @@
+.cart{
+  font-size: 1rem;
+  color: white;
+  border: solid 2px black;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: fit-content;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+
+.cheapest{
+  border: solid 5px green;
+}
+.highestprice{
+  border: solid 5px red;
+}
+app-tour{
+  box-sizing: border-box;
+  border: solid 5px transparent;
+}
+app-shop-cart{
+  position: absolute;
+  top:54px;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  border: solid 2px black;
+  color: black;
+}
+.navbar{
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+}
+#routes{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
+}
+a{
+  margin-right: 10px;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border: solid 2px black;
+  padding: 5px;
+  text-align: center;
+  border-radius: 15px;
+}
+.underbar{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: rgb(130, 49, 39);
+}
+.alike{
+  margin-right: 10px;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: solid 2px transparent;
+  padding: 5px;
+  text-align: center;
+  border-radius: 15px;
+}

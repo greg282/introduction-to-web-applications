@@ -1,0 +1,67 @@
+<div class="wrap">
+<div class="uptext">{{item.name}} <div (click)="delFromDB($event)" class="deldb" *ngIf="fire.userRoles.admin.booleanValue||fire.userRoles.menager.booleanValue">Usuń z bazy</div> </div>
+<div class="uptext">Lokalizacja: {{item.country_of_dest}}</div>
+<div class="imgwrap">
+  <img src={{item.photo_src}} alt="">
+</div>
+<div class="descc">{{item.description}}</div>
+<div class="price" style="position:relative;bottom:3px">{{item.unit_price| currency:'EUR'}}</div>
+
+<app-tour (notifyParent)="updateCart($event)"
+[name]="item.name"
+[country_of_dest]="item.country_of_dest"
+[start_date]="item.start_date"
+[end_date]="item.end_date"
+[unit_price]="item.unit_price"
+[max_people]="item.max_people"
+[curr_state]="item.curr_counter"
+[description]="item.description"
+[photo_src]="item.photo_src"
+[id]="id"
+[special]="false"
+></app-tour>
+
+<form novalidate [formGroup]="myForm" [ngStyle]="{'display': enabled? '':'none'}" *ngIf="!fire.userRoles.menager.booleanValue&&!fire.userRoles.banned.booleanValue" >
+  <fieldset>
+    <div>Dodaj opinie dotycząca wycieczki {{item.name}}</div>
+    <mat-form-field appearance="fill">
+      <mat-label>Podaj swój nick</mat-label>
+      <input formControlName="nick" matInput #nick>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="desc">
+      <mat-label>Dodaj opinie</mat-label>
+      <textarea matInput
+      maxlength="500"
+      minlength="50"
+      cdkTextareaAutosize
+      cdkAutosizeMinRows="1"
+      formControlName="description"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Wybierz Date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date" >
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-label style="text-align: center;">Wybierz Ocene</mat-label>
+    <app-star-review (ratingUpdated)="getStarData($event)"></app-star-review>
+    <button type="button" (click)="submit()" class="btn btn-primary" >Submit</button>
+
+  </fieldset>
+</form>
+<div class="uptext">Opinie</div>
+
+<div class="reviews">
+
+<ng-container *ngFor="let item of data">
+<div class="review">
+<div>{{'Użytkownik: '+item.nick}}</div>
+<div>{{'Opinia: '+item.description}}</div>
+<div>{{item.ndata|date}}</div>
+<div>{{'Ocena: '+item.rating+'/5'}}</div>
+</div>
+</ng-container>
+</div>
+</div>

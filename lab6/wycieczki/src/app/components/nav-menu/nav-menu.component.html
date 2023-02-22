@@ -1,0 +1,28 @@
+<div class="navbar" >
+
+  <div class="underbar">
+
+     <div id="routes">
+      <a routerLink="/home" routerLinkActive="active" ><fa-icon [icon]="faHome"></fa-icon></a>
+      <a routerLink="/tourlist" routerLinkActive="active" >Lista wycieczek</a>
+       <a routerLink="/cart" routerLinkActive="active"  *ngIf="fire.userData!=null" >Koszyk</a>
+       <a routerLink="/login" routerLinkActive="active"  *ngIf="fire.userData==null" >Zaloguj</a>
+       <a routerLink="/register" routerLinkActive="active" *ngIf="fire.userData==null">Rejestracja</a>
+       <a routerLink="/login" routerLinkActive="active" (click)="logout()"  *ngIf="fire.userData!=null" >Wyloguj</a>
+       <a routerLink="/adminview" routerLinkActive="active" *ngIf="fire.userRoles.admin.booleanValue">Admin View</a>
+       <a routerLink="/tripmanager" routerLinkActive="active" *ngIf="fire.userRoles.admin.booleanValue">Trip Manager</a>
+       <div class="alike" *ngIf="fire.userData!=null" >{{fire.userData.email}}</div>
+
+     </div>
+     <div  style="user-select: none;"  class="cart" (click)="showCart()"
+     [ngStyle]="{'background': tour_counter>10 ? 'green' : 'red'}"
+     >W koszyku: {{tour_counter}}<fa-icon [icon]="faCartShopping"></fa-icon>
+
+
+     <app-shop-cart [ngStyle]="{'display': showCart_bool ? '' : 'none'}"></app-shop-cart>
+   </div>
+
+  </div>
+
+
+  </div>

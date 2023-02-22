@@ -1,0 +1,46 @@
+.tour{
+  border: solid 2px black;
+  margin: 10px;;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width:30%;
+  min-width: 300px;
+  background-color: rgb(130, 49, 39);
+  color: white;
+}
+.edit{
+  display: flex;
+  gap: 10px;
+}
+.line{
+  padding: 0.5rem;
+}
+#listoftours
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  align-items: center;
+}
+button{
+  background-color:rgb(130, 49, 39) ;
+  color: white;
+  font-size: 1rem;
+}
+#del  {
+  margin: 10px;
+  background-color: red;
+}
+button:hover{
+  background-color: rgba(65, 25, 19, 0.863);
+  cursor: pointer;
+  transition: all 300ms;
+}
+.top{
+  margin-top: 5px;
+  margin-left: 5px;
+}

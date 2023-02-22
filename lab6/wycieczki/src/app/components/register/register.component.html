@@ -1,0 +1,14 @@
+<div class="form-container">
+  <h2>Zarejstruj się</h2>
+  <form [formGroup]="loginForm">
+    <div class="left-right">
+      <input id="name" type="text" formControlName="login" placeholder="Email"/>
+    </div>
+
+    <div class="left-right">
+      <input id="password" type="password" formControlName="password" placeholder="Password"/>
+    </div>
+  </form>
+  <button type="submit" class="button-accent" (click)="submitForm()">Zarejstruj</button>
+
+</div>

@@ -1,0 +1,34 @@
+  <app-state-persistence></app-state-persistence>
+
+
+<div id="manage">
+  <select (change)="selectOption($event.target)"
+  [(ngModel)]="selected">
+  <option [value]="item.id" *ngFor="let item of userList">{{item.email}}</option>
+</select>
+  <div id="roles">
+    <div class="view" *ngIf="!show_edit">
+     <div class="wrap">
+       <div class="txt">Admin: {{selectedUser.admin}}</div>
+       <div class="txt">Manager: {{selectedUser.menager}}</div>
+       <div class="txt">Client: {{selectedUser.client}}</div>
+       <div class="txt">Guest: {{selectedUser.guest}}</div>
+       <div class="txt">Banned: {{selectedUser.banned}}</div>
+     </div>
+      <button (click)="banUser()">Banuj</button>
+      <button (click)="unbanUser()">Odbanuj</button>
+      <button (click)="setEditMode()">Edytuj Role</button>
+    </div>
+    <div class="edit" *ngIf="show_edit">
+     <div class="wrap">
+       <div class="txt">Admin:<input type="checkbox" [(ngModel)]="selectedUser.admin"></div>
+       <div class="txt">Manager: <input type="checkbox" [(ngModel)]="selectedUser.menager"></div>
+       <div class="txt">Client: <input type="checkbox" [(ngModel)]="selectedUser.client"></div>
+       <div class="txt">Guest: <input type="checkbox" [(ngModel)]="selectedUser.guest"></div>
+       <div class="txt">Banned: <input type="checkbox" [(ngModel)]="selectedUser.banned"></div>
+     </div>
+      <button (click)="disableEditMode(selectedUser)">Zmień Role</button>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="t">
+  <div>Zmień tryb persystencji</div>
+  <div class="wrap">
+
+    <div class="btn" (click)="changePersistence('local')">LOCAL</div>
+    <div  class="btn" (click)="changePersistence('session')">SESSION</div>
+    <div  class="btn" (click)="changePersistence('none')">NONE</div>
+
+  </div>
+  <div>{{curr_state}}</div>
+</div>

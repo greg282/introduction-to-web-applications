@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /Users/{document=**} {
+      allow read, write: if true;
+    }
+    match /Tours/{document=**}{
+      allow read: if true;
+      allow write: if isAdmin()||isMenager();
+    }
+    match /Reviews/{document=**}{
+      allow read: if request.auth != null;
+      allow write: if isClient();
+    }
+    
+    function isAdmin() {
+      return get(/databases/$(database)/documents/Users/$(request.auth.uid)).data.admin==true;
+   	}
+    function isMenager() {
+      return get(/databases/$(database)/documents/Users/$(request.auth.uid)).data.menager==true;
+   	}
+     function isClient() {
+      return get(/databases/$(database)/documents/Users/$(request.auth.uid)).data.client==true;
+   	}
+  }
+  
+}

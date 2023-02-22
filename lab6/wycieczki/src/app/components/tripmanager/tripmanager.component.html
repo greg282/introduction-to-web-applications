@@ -1,0 +1,29 @@
+
+<app-form *ngIf="form_enabled"></app-form>
+<button class="top" *ngIf="form_enabled" (click)="hideForm()">Wróć</button>
+<button class="top" *ngIf="!form_enabled" (click)="showForm()">Dodaj wycieczkę</button>
+
+<div id="listoftours" *ngIf="!form_enabled">
+  <div class="tour" *ngFor="let item of db">
+    <div class="line">Nazwa Wycieczki: {{item.name}}</div>
+    <div class="line">Kraj Wycieczki: {{item.country_of_dest}}</div>
+
+    <div class="edit line">
+      <div>Cena:</div>
+      <input min="1" *ngIf="edit_mode_price" type="number" [(ngModel)]="item.unit_price">
+      <div *ngIf="!edit_mode_price"> {{item.unit_price}}</div>
+      <button (click)="setEditMode()" *ngIf="!edit_mode_price" >Edytuj cene</button>
+      <button (click)="updatePrice(item.id,item.unit_price)" *ngIf="edit_mode_price">Zmień cene</button>
+    </div>
+
+    <div class="edit line">
+      <div>Ilość miejsc:</div>
+      <input min="1" *ngIf="edit_mode_people" type="number" [(ngModel)]="item.max_people">
+      <div *ngIf="!edit_mode_people"> {{item.max_people}}</div>
+      <button (click)="setEditModePeople()" *ngIf="!edit_mode_people" >Edytuj liczbe miejsc</button>
+      <button (click)="updatePeople(item.id,item.max_people)" *ngIf="edit_mode_people">Zmień liczbe miejsc</button>
+    </div>
+
+    <button id="del" (click)="delFromDb(item.id)" >Usuń z bazy</button>
+  </div>
+</div>
