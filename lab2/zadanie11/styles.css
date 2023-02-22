@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+.menu{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+.sub-menu-wrap{
+    background-color: rgb(203, 84, 104);
+    width: 225px;
+    position: relative;
+    
+}
+.submenu{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+    border-bottom: 1px solid rgb(105, 39, 50); 
+    position: relative;  
+}
+.button{
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+    position: relative;
+}
+.submenu:before{
+    content: '';
+    border-left: 8px solid transparent;
+    border-right:8px solid transparent;
+    border-top:10px solid rgb(203, 84, 104);
+    position: absolute;
+    right: 20px;
+    display: block;
+    z-index: 10;
+}
+
+
+.top{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.bottom{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+#tmp{
+    border: none;
+}
+.submenu:target{
+    max-height: 200px;
+    transition: max-height 0.35s ease-in;
+    border: none;
+}
+
+
+
+
+.item{
+    background: rgb(32, 68, 130);
+    color: white;
+    font-size: 1rem;
+    padding: 12.5px;
+    border-bottom: 1px solid rgb(15, 31, 58);
+    
+    
+}
+.submenu .item:hover{
+    background: linear-gradient(to top,rgb(87, 105, 134) 50%,rgb(32, 68, 130) 50%);
+    transition: all 0.3s;
+}
+
+.submenu .item:hover:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 22px solid transparent;
+    border-left: 11px solid white;
+    border-bottom: 22px solid transparent;
+    transition: all 0.25s ease-in;
+}
+
+.submenu .item:hover:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top: 22px solid transparent;
+    border-right: 11px solid white;
+    border-bottom: 22px solid transparent;
+}
+.wrap{
+    position: relative;
+}
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

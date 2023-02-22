@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+}
+.navbar{
+ background-color: #5EB5E2;
+ display: flex;
+ flex-wrap: nowrap;
+ font-family: 'Montserrat',sans-serif,Arial, Helvetica, sans-serif;
+ justify-content: space-between;
+ font-size: 1.4rem;
+ color: white;
+ min-width: 1030px;
+}
+
+
+.central-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.1rem;
+    position: relative;
+
+}
+
+.right-items{
+    display:flex;
+    flex-wrap: nowrap;
+    margin-right:80px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.login,.signup{
+    border: solid white 2px;
+    padding: 10px;
+    border-radius: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+.signup{
+    background-color: white;
+    color: #5EB5E2;
+    margin-left: 10px;
+}
+
+.brand-name{
+    margin-left: 80px;
+    font-weight:700 ;
+}
+.right-items,.brand-name{
+    text-align: center;
+    
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+.dropdown-menu a{
+    text-decoration: none;
+    color: #5EB5E2;
+    background-color: white;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-top: #5EB5E2 1px solid;
+    border-left:#5EB5E2 1px solid;
+    border-right:#5EB5E2 1px solid;
+    width: 200%;
+    font-size: 0.8rem;
+}
+.dropdown-menu a:last-child{
+    border-bottom: #5EB5E2 1px solid;
+}
+
+
+.central-item{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 22px 14px;
+    display: inline-block;
+}
+i{
+    font-size: 1rem;
+    margin-left: 4px;
+}
+.brand-name{
+    display: flex;
+    align-self: center;
+}
+.dropdown-button{
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    
+}
+
+.dropdown-button:hover .dropdown-menu{
+    display: block;
+}
+.dropdown-button:hover .dropdown-menu a:hover{
+
+    background-color: #5EB5E2;
+    color: white;
+}
+
+
+body{
+    background: linear-gradient(#5eb6e2a5,#5eb6e2a5),url("bg.jpg") no-repeat center center fixed; 
+    background-size: cover;
+  
+}
+
+.signup:hover{
+    background-color: #5EB5E2;
+    color: white;
+    transition: all 300ms;
+}
+.login:hover{
+    color: #5EB5E2;
+    background-color: white;
+    transition: all 300ms;
+}
+.dropdown-menu:before{
+    content: '';
+    border-left: 8px solid transparent;
+    border-right:8px solid transparent;
+    border-bottom:10px solid white;
+    position: absolute;
+    right: 20px;
+    top: -8px;
+    display: block;
+    z-index: 10;
+}
+

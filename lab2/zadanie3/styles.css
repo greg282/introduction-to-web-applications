@@ -1,0 +1,96 @@
+body{
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+
+p{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#main-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+   
+}
+.city-card{
+    box-shadow: 2px 10px 20px 5px rgba(0,0,0,.35);
+    width: 25%;
+    max-width: 400px;
+    min-width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif,Arial, Helvetica, sans-serif;
+    margin:10px ;
+    
+}
+.city-photo{ 
+    margin: 0;
+}
+.city-photo img { 
+    width: 100%;
+    height: 100%;
+}
+p{
+    display: block;
+}
+.middle-of-card{
+    margin: 1.3rem;
+}
+.middle-of-card header{
+    font-size: 1.5rem;
+    font-weight:bolder;
+}
+.middle-of-card p{
+    font-size: 1.3rem;
+    color: red;
+}
+.button a{
+    text-decoration: none;
+    color: white;
+}
+.bottom-of-card{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 2px  solid rgba(68, 64, 64, 0.281);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.button{
+    background-color: rgb(224, 52, 52);
+    width: 40%;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;    
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.stats{
+    margin-right: 10%;
+}
+
+.fa-regular{
+    margin-right: 5px;
+}
+
+article{
+    font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+    .city-card{
+       width: 40vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .city-card{
+        width: 100%;
+        max-width: 800px;
+    }
+}

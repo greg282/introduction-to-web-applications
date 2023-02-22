@@ -1,0 +1,190 @@
+body{
+ background-color: rgb(212, 212, 212);
+ font-family:Arial, Helvetica, sans-serif;
+}
+.card-container{
+    box-shadow: 0 0  20px  rgba(78, 78, 78, 0.658);
+    margin: 20px;
+    width: 30vw;
+    height: 510px;
+    flex-basis: 30%;
+    max-width: 350px;
+    min-width: 250px;
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+.outer{
+    background-color: transparent;
+    perspective: 1200px;
+}
+.photo{
+    width: 100%;
+    height: 100%;
+
+    
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card-img{
+    height: 50%;
+    border-radius: 10px;
+    
+}
+.card-front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 20px;
+
+
+}
+.cut{
+    background-color: rgb(255, 255, 255);
+    width: 200%;
+    height: 100%;
+    transform: rotate(-8deg) translate(-10%,-15%);
+    position: absolute;
+}
+.card-text{
+    width: 100%;
+    height: 50%;
+    
+    
+}
+
+.gradient{
+    position: absolute;
+    background-image: linear-gradient(to bottom right , rgba(224, 172, 31, 0.405), rgba(204, 207, 20, 0.373));
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.side-text{
+    position: absolute;
+    top: 0;
+    
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color:white;
+    padding: 10px;
+    background-color: rgba(214, 167, 14, 0.399);
+}
+.side-text1{
+    right: 5px;
+    top:100px;
+}
+
+.side-text2{
+    right: 10px;
+    top:140px;
+}
+.card-text{
+    position: relative;
+    color: rgb(82, 82, 82);
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+.text{
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid rgba(104, 103, 103, 0.651);
+}
+.card-back{
+    background-image: linear-gradient(to bottom right , rgba(224, 172, 31), rgba(204, 207, 20));
+    
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    -webkit-backface-visibility :hidden;
+    backface-visibility:hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.cardback-content{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.button{
+    margin-top: 20px ;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid white;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+.button:hover{
+    transition: all 0.5s ease-in-out;
+    color: white;
+    background-color: black;
+    
+}
+.text-price{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.price{
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.outer:hover .card-container{
+    transform: rotateY(180deg);
+    
+}
+.outer:hover .card-container .card-front{
+    transition: 1s;
+   opacity: 0;
+    
+}
+
+@media (max-width: 650px) { 
+    .card-container{
+        width: 350px;
+    }
+}
+
+.card2 .card-back{
+    background-image: linear-gradient(to bottom right , rgb(31, 156, 224), rgb(20, 107, 207));
+}
+.card2 .gradient{
+    background-image: linear-gradient(to bottom right , rgba(31, 156, 224, 0.596), rgba(20, 107, 207, 0.556));
+}
+.card2 .side-text{
+    background-color: rgba(31, 156, 224, 0.596);
+}
+
+.card3 .card-back{
+    background-image: linear-gradient(to bottom right , rgb(31, 224, 47), rgb(132, 207, 20));
+}
+.card3 .gradient{
+    background-image: linear-gradient(to bottom right , rgba(31, 224, 47, 0.55), rgba(31, 224, 47, 0.573));
+}
+.card3 .side-text{
+    background-color: rgba(31, 224, 47, 0.575);
+}
