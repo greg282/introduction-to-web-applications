@@ -1,0 +1,58 @@
+<label>Select brand</label>
+        <ng-select [items]="cars"
+                   bindLabel="name"
+                   placeholder="Select car"
+                   [(ngModel)]="selectedCar"
+                   (change)="getSelectedCar()"
+                   (clear)="clearData_brand()">
+        </ng-select>
+        <p >
+            Selected brand: {{info}}
+        </p>
+
+<label>Select model</label>
+        <ng-select [items]="model_array"
+                   bindLabel="name"
+                   placeholder="Select model"
+                   [(ngModel)]="selectedModel"
+                   (change)="getSelectedModel()"
+                   (clear)="clearData_model()"
+                 >
+        </ng-select>
+        <p >
+            Selected model: {{info2}}
+        </p>
+
+<label>Select Color</label>
+        <ng-select [items]="color_array"
+                   bindLabel="name"
+                   [(ngModel)]="selectedColor"
+                   (change)="getSelectedColor()"
+                   (clear)="clearData_Color()"
+                  style="width: 100px;"
+                 >
+                 <ng-template ng-option-tmp let-item="item">
+                  <div style="width:100% ; height: 20px;" [style.background]="item.code" >
+
+                  </div>
+
+              </ng-template>
+              <ng-template ng-label-tmp let-item="item">
+                <div style="width:100px ; height: 20px;" [style.background]="item.code" >
+
+                </div>
+
+            </ng-template>
+        </ng-select>
+
+        <div style="border: 2px solid black; width: fit-content; margin-top: 20px;">
+          <div>
+            {{selectedCar.name}}
+            {{selectedModel.name}}
+          </div>
+            <div style="width:100px ; height: 20px;" [style.background]="selectedColor.code" >
+
+            </div>
+
+        </div>
+

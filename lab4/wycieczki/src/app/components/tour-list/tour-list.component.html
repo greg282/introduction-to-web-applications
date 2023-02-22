@@ -1,0 +1,42 @@
+<app-form style="position: absolute; right: 0; z-index: 10; background-color: white; display: none;" (sendObjForm)="pushData($event)"></app-form>
+<router-outlet (activate)="hideData()" (deactivate)="pushData($event)"></router-outlet>
+<div class="navbar">
+
+<div class="underbar">
+
+   <div id="routes">
+    <a routerLink="/" routerLinkActive="active" >Strona główna</a>
+     <a routerLink="/form" routerLinkActive="active" >Dodaj wycieczkę</a>
+
+   </div>
+   <div  style="user-select: none;"  class="cart" (click)="showCart()"
+   [ngStyle]="{'background': tour_counter>10 ? 'green' : 'red'}"
+   >W koszyku: {{tour_counter}}
+   <app-shop-cart [ngStyle]="{'display': showCart_bool ? '' : 'none'}"></app-shop-cart>
+ </div>
+
+</div>
+
+
+</div>
+<div class="main" [ngStyle]="{'display':hide_main ? 'none' : '' }">
+  <app-tour
+#iems
+(enableCurrItem)="setEnabledByID($event)"
+(disableCurrItem)="setDisabledByID($event)"
+(updateLocalDatabase)="rmById($event)"
+(notifyParent)="updateCart($event)"
+  *ngFor="let item of database "
+  [name]="item.name"
+  [country_of_dest]="item.country_of_dest"
+  [start_date]="item.start_date"
+  [end_date]="item.end_date"
+  [unit_price]="item.unit_price"
+  [max_people]="item.max_people"
+  [description]="item.description"
+  [photo_src]="item.photo_src"
+  [id]="item.id"
+  [ngClass]="{'cheapest': item.unit_price==getmaxprice(),'highestprice' : item.unit_price==getminprice()}"
+
+  #listel></app-tour>
+</div>

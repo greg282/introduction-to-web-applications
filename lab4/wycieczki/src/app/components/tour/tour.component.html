@@ -1,0 +1,43 @@
+<div id="main-container"
+>
+  <div id="tour-name">{{name | uppercase }}</div>
+  <div id="delete" (click)="removeTour($event)">&#10060;</div>
+  <div id="photo-container">
+    <img src="{{photo_src}}" alt="">
+  </div>
+  <div id="country">{{country_of_dest | uppercase}}</div>
+  <div id="dates">
+    <div class="start">Start: {{start_date | date}}</div>
+    <div class="end">Koniec: {{end_date | date}}</div>
+  </div>
+  <div id="description">{{description}}</div>
+  <div id="special1"
+  [ngStyle]="{'display': curr_state==0 ? 'block' : 'none' }"
+  >Brak miejsc</div>
+  <div id="special2"
+  [ngStyle]="{'display': curr_state<=3&&curr_state>0 ? 'block' : 'none' }"
+  >Ostatnie miejsca</div>
+<div class="wrapr">
+    <div id="down-menu">
+      <div id="price">Cena: {{unit_price | currency:'EUR'}}</div>
+      <div id="add-delete-count">
+        <div style="user-select: none;" #rmbutton id="minus" (click)="rm_click()">&#8722;
+        </div>
+        <div id="curr-count">{{curr_state}}</div>
+        <div style="user-select: none;" #plusbutton id="plus" (click)="add_click()">&#43;
+        </div>
+      </div>
+
+    </div>
+
+  <div id="review-site">
+    <div id="wrap-r">
+      <div id="nof">{{'Liczba opinii: '+reviews.length}}</div>
+      <div id="avg">{{"Ocena: "+avg_review+"/"+5}}</div>
+    </div>
+    <button id="review-btn" (click)="onReview()" >Wystaw opinie</button>
+    <app-star-review class="jd" (ratingUpdated)="onUpdateReview($event)" [ngStyle]="{'display': review_buttons_enabled ? '': 'none'}"></app-star-review>
+  </div>
+</div>
+
+</div>

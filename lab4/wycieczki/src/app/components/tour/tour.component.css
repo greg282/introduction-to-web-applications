@@ -1,0 +1,235 @@
+#main-container{
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 250px;
+  max-width: 350px;
+  background-color: whitesmoke;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  position: relative;
+  box-sizing: border-box;
+  height: 585px;
+}
+*{
+ /* --colormy:rgb(24, 112, 227);*/
+ --colormy:rgb(130, 49, 39);
+
+}
+#photo-container{
+  width: 100%;
+  height: 100%;
+}
+#photo-container img{
+  display: inline;
+  margin: 0 auto;
+  margin-left: -25%;
+  height: 100%;
+  width: auto;
+}
+#photo-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid 5px var(--colormy);
+  box-shadow: 2px 2px 24px 0px rgba(66, 68, 90, 1);
+ }
+ #tour-name{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--colormy);
+  padding-top: 5px;
+ }
+ #country{
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  text-align: center;
+  color: var(--colormy);
+  position: relative;
+  margin-top: 10px;
+ }
+ #dates{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+ .start,.end{
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px;
+  background-color:var(--colormy);
+  border-radius: 10px;
+  color: white;
+  width: 35%;
+ }
+ #description{
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+ }
+ #add-delete-count{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+ }
+ #down-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+ }
+ #price{
+  background-color: var(--colormy);
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 10px;
+ }
+ #minus{
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border: solid 2px black;
+  cursor: pointer;
+
+ }
+ #plus{
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border: solid 2px black;
+  cursor: pointer;
+ }
+ #curr-count{
+  font-size: 1.5rem;
+  padding: 5px;
+  background-color: grey;
+  border-radius: 10px;
+  margin: 10px;
+ }
+ #special1{
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: rgba(255, 0, 0, 0.674);
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 2px black;
+  color: white;
+  width: 80%;
+  text-align: center;
+  top: 30%;
+  display: none;;
+  left: 50%;
+  transform: translateX(-50%);
+ }
+ #special2{
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: rgba(238, 255, 0, 0.758);
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 2px black;
+  width: 80%;
+  text-align: center;
+  top: 30%;
+  display: none;;
+ }
+ #delete{
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+ }
+
+ #review-btn{
+  background-color: rgb(130, 49, 39);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  transition: all 200ms ease-out;
+  margin-bottom: 5px;
+ }
+
+ #review-btn:hover{
+  background-color: rgb(196, 84, 69);
+  transition: all 200ms ease-in;
+ }
+ #review-site{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+#wrap-r{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+#nof,#avg
+{
+  color:rgb(130, 49, 39) ;
+  margin: 5px;
+  font-size: 1.2rem;
+}
+
+app-star-review{
+  margin-bottom: 5px;
+
+}
+
+@media (max-width: 768px) {
+  #main-container{
+    min-width: none;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 653px) {
+  #main-container{
+    min-width: 280px;
+    max-width: 400px;
+  }
+}
+.wrapr{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.jd{
+  position: absolute;
+    top: -100%;
+    background-color: goldenrod;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+}

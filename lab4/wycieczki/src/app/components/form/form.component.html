@@ -1,0 +1,64 @@
+<form novalidate [formGroup]="myForm">
+  <fieldset>
+    <mat-form-field appearance="fill">
+      <mat-label>Kraj docelowy</mat-label>
+      <input formControlName="country_of_dest" matInput #country>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Nazwa wycieczki</mat-label>
+      <input formControlName="name" matInput #last>
+    </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Wprowadź date wycieczki</mat-label>
+    <mat-date-range-input  [rangePicker]="picker">
+      <input matStartDate formControlName="start_date" placeholder="Start date">
+      <input matEndDate formControlName="end_date" placeholder="End date">
+    </mat-date-range-input>
+    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Wprowadź krótki opis</mat-label>
+    <textarea matInput
+              maxlength="150"
+              cdkTextareaAutosize
+              cdkAutosizeMinRows="1"
+              cdkAutosizeMaxRows="5"
+              formControlName="description"
+              ></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Podaj cene:</mat-label>
+
+    <input matInput
+    type="number"
+    formControlName="unit_price"
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Podaj maksymalną liczbe osób:</mat-label>
+    <input matInput
+    type="number"
+    #people
+    formControlName="max_people"
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Podaj link do zdjecia:</mat-label>
+    <input matInput
+    type="text"
+    formControlName="photo_src"
+    >
+  </mat-form-field>
+
+  <button type="button" (click)="submit()" class="btn btn-primary" >Submit</button>
+
+</fieldset>
+
+</form>

@@ -1,0 +1,46 @@
+{
+  "cars":[
+    {"id": 1, "name": "Mercedes"},
+    {"id": 2, "name": "BMW"},
+    {"id": 3, "name": "Audi"},
+    {"id": 4, "name": "Renault"},
+    {"id": 5, "name": "Ford"}],
+  "models":[
+    {"id": 0},
+    {"id": 1, "model_array":[
+      {"name":"A45 AMG"},
+      {"name":"G Wagon"},
+      {"name":"S Class"}
+    ]},
+    {"id": 2, "model_array":[
+      {"name":"M3"},
+      {"name":"E46"},
+      {"name":"M4"}
+    ]},
+    {"id": 3, "model_array":[
+      {"name":"R8"},
+      {"name":"A4"},
+      {"name":"A8"}
+    ]},
+    {"id": 4, "model_array":[
+      {"name":"Megane"},
+      {"name":"Talisman"},
+      {"name":"Clio"}
+    ]},
+    {"id": 5, "model_array":[
+      {"name":"Focus"},
+      {"name":"Mustang"},
+      {"name":"Mondeo"}
+    ]}
+  ]
+  ,
+  "color_array":[
+    {"code":"#FF0000"},
+    {"code":"#00ff00"},
+    {"code":"#0000ff"},
+    {"code":"#ff8000"},
+    {"code": "#ff0080"}
+  ]
+
+
+}

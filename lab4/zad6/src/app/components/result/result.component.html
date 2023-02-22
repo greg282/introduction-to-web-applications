@@ -1,0 +1,13 @@
+<div class="text-box">
+  <div class="header">{{type}}</div>
+  <div class="desc">{{text}}</div>
+</div>
+
+<div class="outer">
+  <div class="heading">Wybierz temat</div>
+  <div id="main">
+    <app-topics  (notifyParent)="onNotify($event)" info_id="basics" info_type="The Basics" info_text="Core Angular basics you have to know"></app-topics>
+    <app-topics  (notifyParent)="onNotify($event)" info_id="components" info_type="Components" info_text="Components are a core concept."></app-topics>
+    <app-topics  (notifyParent)="onNotify($event)" info_id="events" info_type="Events" info_text="Events are important in Angular"></app-topics>
+  </div>
+</div>

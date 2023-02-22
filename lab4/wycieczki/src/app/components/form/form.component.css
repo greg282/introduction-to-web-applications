@@ -1,0 +1,23 @@
+fieldset{
+  display: flex;
+  flex-direction: column;
+}
+button{
+  border: solid 2px black;
+  padding: 10px;
+  border-radius: 10px;
+}
+button:hover{
+  background-color: rgb(178, 178, 178);
+  transition: all 400ms;
+}
+fieldset{
+  position: absolute;
+  z-index: 9;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  margin-top: 100px;
+
+}
